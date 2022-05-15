@@ -1,0 +1,19 @@
+[data-md-color-scheme="slate"]
+{
+    --md-primary-fg-color: rgb(35,37,39);
+    --md-footer-bg-color: rgb(35,37,39);
+    --md-footer-bg-color--dark: rgb(41,42,46);
+    --md-code-bg-color: rgb(35,37,39);
+    --md-default-bg-color: rgb(26,27,31);
+    --md-typeset-a-color: rgb(138,180,248);
+}
+[data-md-color-scheme="default"]
+{
+    --md-typeset-a-color: rgb(17,100,171);
+    --md-code-bg-color: rgb(255,255,255);
+    --md-default-bg-color: rgb(244,244,244);
+}
+
+code {
+    white-space : pre-wrap !important;
+}

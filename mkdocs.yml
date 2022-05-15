@@ -1,0 +1,106 @@
+site_name: Kafka Hub
+
+theme:
+  name: material
+  logo: assets/logo.svg
+  features:
+    #- navigation.indexes
+    - navigation.tracking
+    - navigation.tabs
+    #- navigation.sections
+    - navigation.instant
+    #- navigation.expand
+    - search.share
+    - search.highlight
+    - search.suggest
+    - header.autohide
+    - content.code.annotate
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Light mode
+      primary: white
+      accent: amber
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Light mode
+      accent: amber
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: assets/logo.svg
+extra_css:
+  - stylesheets/extra.css
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+  - pymdownx.tabbed:
+      alternate_style: true 
+plugins:
+  - search
+  - minify:
+      minify_html: true
+
+
+nav:
+  - Kafka 101:
+    - 1. Introduction: index.md
+    - 2. Setup Kafka Cluster:
+      - Install Docker: getting-started/setup-cluster/install-docker.md
+      - Run Kafka Cluster: getting-started/setup-cluster/run-kafka-cluster.md
+      - Add Control Center UI: getting-started/setup-cluster/control-center.md
+      - Create our Topic: getting-started/setup-cluster/create-topic.md
+
+    - 3. Develop Kafka Clients:
+      - Develop Clients: getting-started/develop-clients/index.md
+      - .NET:
+        - Producer: getting-started/develop-clients/dotnet/producer.md
+        - Consumer: getting-started/develop-clients/dotnet/consumer.md
+      - Java:
+        - Producer: getting-started/develop-clients/java/producer.md
+        - Consumer: getting-started/develop-clients/java/consumer.md
+    
+    - 4. Secure using SSL:
+      - Create Certificates: getting-started/ssl/create-certs.md
+      - Kafka Cluster: getting-started/ssl/secure-cluster.md
+      - Kafka Clients:
+        - .NET : getting-started/ssl/secure-dotnet-client.md
+        - Java: getting-started/ssl/secure-java-client.md
+      - Kafka Topic ACL's: getting-started/ssl/acls.md
+    
+    - 5. Connecting to Eventhub:
+      - Environments: getting-started/eventhub/environments.md
+      - Topic Management: getting-started/eventhub/topic-management.md
+      - Configure Clients: getting-started/eventhub/configure-clients.md
+      - Test using Kafka API: getting-started/eventhub/kafka-api.md
+
+    - 6. Deployment:
+      - Deploy Clients:
+        - Digital Platform 2.0: getting-started/deploy/dp2.md
+        - Eventhub Farms: getting-started/deploy/eventhub-farms.md
+    
+    - 7. Monitoring:
+      - Splunk Queries: getting-started/monitoring/splunk.md
+  
+  - Kafka Client Guides:
+    - clients/index.md
+    - Kafka Streamers:
+      - Streamer: clients/kafka-streamer/index.md
+    - Kafka Connectors:
+      - Kafka Connect: clients/kafka-connect/index.md
+      - Sink Connector: clients/kafka-connect/sink-connector.md
+      - Source Connector: clients/kafka-connect/source-connector.md
+      - Deployment: clients/kafka-connect/deployment.md
+
+  - References:
+    - Support Teams: references/support-teams.md
